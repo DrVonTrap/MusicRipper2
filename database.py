@@ -31,8 +31,7 @@ def addSong(song):
     c = conn.cursor()
 
     if "url" not in song.keys():
-        return False
-
+        song["url"] = "None"
     if "title" not in song.keys():
         song["title"] = "None"
     if "artist" not in song.keys():
